@@ -1,8 +1,8 @@
 PlanetsApp::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
-
-get '/planets', to: 'planets#index'
+  resources :planets
+#get '/planets', to: 'planets#index' as: 'space_rocks'
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

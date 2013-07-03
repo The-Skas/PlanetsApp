@@ -1,0 +1,9 @@
+<h1>New Planet</h1>
+
+<%= form_for(@planet) do |f|%>
+name:
+<%= f.text_field :name %>
+Orbit:
+<%=f.text_field :orbit %>
+<%= f.submit 'Test' %>
+<% end %>

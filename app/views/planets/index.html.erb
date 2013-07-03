@@ -1,4 +1,11 @@
+<% if @planets %>
 <% @planets.each do |planet| %>
     <%= planet.name %> has <%= pluralize(planet.moons, 'moon') %>.
+    <%= link_to 'show', planet_path(planet) %>
+    <%= link_to 'edit', edit_planet_path(planet) %>
+    <%= link_to 'destroy', planet, method: :delete, data: {
+        confirm: 'Are you sure?'} %>
     <br>
+
+<% end %>
 <% end %>
